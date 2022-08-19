@@ -151,7 +151,8 @@ async def sed(command):
                 await command.edit("B O I! [Learn Regex](https://regexone.com)")
                 return
             if text:
-                await command.edit(f"Did you mean? \n\n{text}")
+#                await command.edit(command.text)
+                await command.respond(text)
 
 register_module_desc("Correct people.")
 register_cmd_usage("s","<delimiter><old word(s)><delimiter><new word(s)>", "Replaces a word or words using sed. No space between .s and argument.\nDelimiters: `/, :, |, _`")
